@@ -6,14 +6,13 @@ export const environment = {
   production: false,
   apiService: '',
   firebase: {
-    projectId: 'rewards-latino',
-    appId: '1:415683183727:web:626ceaf1a4b629376e399a',
-    storageBucket: 'rewards-latino.appspot.com',
-    locationId: 'us-central',
-    apiKey: 'AIzaSyCN-xRqybAkJJQjIcCCJoyvGJtc7sbjV7A',
-    authDomain: 'rewards-latino.firebaseapp.com',
-    messagingSenderId: '415683183727',
-    measurementId: 'G-82P6Z9PXH7',
+    apiKey: "AIzaSyAfmXI4XSycECbUBTtbhoqfKOkpZPrF4fI",
+    authDomain: "ngorion-70f23.firebaseapp.com",
+    projectId: "ngorion-70f23",
+    storageBucket: "ngorion-70f23.appspot.com",
+    messagingSenderId: "425478083300",
+    appId: "1:425478083300:web:c644903c77c1d22c56d2f1",
+    measurementId: "G-1VBC00SD0K"
   },
   
 };
