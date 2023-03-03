@@ -1,0 +1,27 @@
+<div class="card">
+    <p-dataView [value]="companies" layout="grid" [rows]="9">
+        <ng-template pTemplate="header">EMPRESAS
+            AFILIADAS<p-dataViewLayoutOptions></p-dataViewLayoutOptions></ng-template>
+        <ng-template let-company pTemplate="listItem">
+            <div>
+                {{company.name}}
+            </div>
+        </ng-template>
+        <ng-template let-company pTemplate="gridItem">
+            <div class="col-12 md:col-3">
+                <div class="product-grid-item card">
+                    <div class="product-grid-item-top">
+                    </div>
+                    <div class="product-grid-item-content">
+                        <img src="{{company.logo}}" (click)="show()"/>
+                    </div>
+                    <div class="product-grid-item-bottom">
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+        </ng-template>
+    </p-dataView>
+</div>

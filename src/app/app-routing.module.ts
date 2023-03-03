@@ -3,8 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../config/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginAdminComponent } from './auth/admin/login-admin/login-admin.component';
+import { ConstantsComponent } from './constants/constants.component';
+import { CompaniesComponent } from './modules/companies/companies.component';
 
 const routes: Routes = [
+  {
+    path: ConstantsComponent.companies_endpoint,
+    component: CompaniesComponent,
+  },
   {
     path: 'portal',
     loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule),

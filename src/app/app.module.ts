@@ -16,21 +16,29 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.prod';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
-import { provideStorage, getStorage, StorageModule } from '@angular/fire/storage';
+import {
+  provideStorage,
+  getStorage,
+  StorageModule,
+} from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { QRCodeModule } from 'angularx-qrcode';
 
+//Prime Components
+import {DataViewModule} from 'primeng/dataview';
+import {PanelModule} from 'primeng/panel';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { DialogModule } from 'primeng/dialog';
+
 // Idioma Español
 import { DatePipe, TitleCasePipe } from '@angular/common';
-import { CargaImagenesService } from './services/cargaImagenes.service';
-
+import { CompaniesService } from './services/companies.service';
+import { CompaniesComponent } from './modules/companies/companies.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent, CompaniesComponent],
   imports: [
     BrowserModule,
     AuthModule,
@@ -50,9 +58,12 @@ import { CargaImagenesService } from './services/cargaImagenes.service';
     AngularFireAuthModule,
     //QR
     QRCodeModule,
-
+    DataViewModule,
+    PanelModule,
+    DynamicDialogModule,
+    DialogModule,
   ],
-  providers: [DatePipe, TitleCasePipe],
-  bootstrap: [AppComponent]
+  providers: [DatePipe, TitleCasePipe, CompaniesService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
