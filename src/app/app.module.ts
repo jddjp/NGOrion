@@ -29,16 +29,21 @@ import { QRCodeModule } from 'angularx-qrcode';
 //Prime Components
 import {DataViewModule} from 'primeng/dataview';
 import {PanelModule} from 'primeng/panel';
-import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { DynamicDialogModule, DialogService } from 'primeng/dynamicdialog';
 import { DialogModule } from 'primeng/dialog';
 
 // Idioma Español
 import { DatePipe, TitleCasePipe } from '@angular/common';
 import { CompaniesService } from './services/companies.service';
 import { CompaniesComponent } from './modules/companies/companies.component';
+import { CompanyDetailComponent } from './modules/company-detail/company-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, CompaniesComponent],
+  declarations: [
+    AppComponent, 
+    CompaniesComponent, 
+    CompanyDetailComponent,
+  ],
   imports: [
     BrowserModule,
     AuthModule,
@@ -63,7 +68,12 @@ import { CompaniesComponent } from './modules/companies/companies.component';
     DynamicDialogModule,
     DialogModule,
   ],
-  providers: [DatePipe, TitleCasePipe, CompaniesService],
+  providers: [
+    DatePipe, 
+    TitleCasePipe, 
+    CompaniesService, 
+    DialogService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
