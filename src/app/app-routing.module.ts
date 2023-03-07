@@ -5,11 +5,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginAdminComponent } from './auth/admin/login-admin/login-admin.component';
 import { ConstantsComponent } from './constants/constants.component';
 import { CompaniesComponent } from './modules/companies/companies.component';
+import { AddCompanyComponent } from './modules/admin/companies/add-company/add-company/add-company.component';
 
 const routes: Routes = [
   {
     path: ConstantsComponent.companies_endpoint,
     component: CompaniesComponent,
+  },
+  {
+    path: ConstantsComponent.add_company_endpoint,
+    component: AddCompanyComponent,
   },
   {
     path: 'portal',

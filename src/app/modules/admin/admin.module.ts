@@ -50,6 +50,7 @@ import {PickListModule} from 'primeng/picklist';
 import { InputTextModule } from 'primeng/inputtext';
 
 import { AddNominacionAdminComponent } from './nominaciones/add-nominacion/add-nominacion.component';
+import { AddCompanyComponent } from './companies/add-company/add-company/add-company.component';
 
 @NgModule({
     imports: [
@@ -102,6 +103,7 @@ import { AddNominacionAdminComponent } from './nominaciones/add-nominacion/add-n
         EvaluacionNominacionesComponent,
         MensajesContactoComponent,
         AddNominacionAdminComponent,
+        AddCompanyComponent,
     ]
 })
 export class AdminModule { }

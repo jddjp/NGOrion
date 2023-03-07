@@ -31,6 +31,8 @@ import {DataViewModule} from 'primeng/dataview';
 import {PanelModule} from 'primeng/panel';
 import { DynamicDialogModule, DialogService } from 'primeng/dynamicdialog';
 import { DialogModule } from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {FileUploadModule} from 'primeng/fileupload';
 
 // Idioma Español
 import { DatePipe, TitleCasePipe } from '@angular/common';
@@ -67,6 +69,8 @@ import { CompanyDetailComponent } from './modules/company-detail/company-detail.
     PanelModule,
     DynamicDialogModule,
     DialogModule,
+    InputTextModule,
+    FileUploadModule,
   ],
   providers: [
     DatePipe, 
