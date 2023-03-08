@@ -44,11 +44,11 @@ import { CompaniesService } from './services/companies.service';
 import { CompaniesComponent } from './modules/companies/companies.component';
 import { CompanyDetailComponent } from './modules/company-detail/company-detail.component';
 
+
 @NgModule({
   declarations: [
     AppComponent, 
     CompaniesComponent, 
-    CompanyDetailComponent,
   ],
   imports: [
     BrowserModule,
