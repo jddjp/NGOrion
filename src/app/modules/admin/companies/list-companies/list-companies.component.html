@@ -13,7 +13,7 @@
         </ng-template>
     </p-toolbar>
 
-    <p-table #dt [value]="ContactoModels" [rows]="10" [paginator]="true" [globalFilterFields]="['nombre','country.nombre','representative.nombre','status']" responsiveLayout="scroll" [(selection)]="selectedContactoModels" [rowHover]="true" dataKey="id" currentPageReportTemplate="Mostrando   {first}hasta  {last} de {totalRecords} mensajes"
+    <p-table #dt [value]="ContactoModels" [rows]="10" [paginator]="true" [globalFilterFields]="['nombre','country.nombre','representative.nombre','status']" responsiveLayout="scroll" [(selection)]="selectedContactoModels" [rowHover]="true" dataKey="id" currentPageReportTemplate="Mostrando   {first}hasta  {last} de {totalRecords}  Empresas"
         [showCurrentPageReport]="true">
         <ng-template pTemplate="caption">
             <div class="flex align-items-center justify-content-between">
