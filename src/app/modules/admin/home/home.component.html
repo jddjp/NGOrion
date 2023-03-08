@@ -1,1 +1,26 @@
-<p>home works!</p>
+<p-card [style]="{width: '70%', margin: 'auto auto'}" styleClass="p-card-shadow">
+    <div class="logo-container">
+        <img alt="logo" src="assets/img/logo_orion.png" class="logo">
+    </div>
+    <p-card header="Administración " [style]="{width: '50%', margin: 'auto auto'}" styleClass="p-card-shadow" align="center">
+        <div class="col-12">
+            <button pButton pRipple type="button" label="Administrar Afiliados" class="p-button-rounded p-button-lg"></button>
+        </div>
+        
+        <div class="col-12">
+            <button pButton pRipple type="button" label="Administrar Monederos" class="p-button-rounded p-button-lg"></button>
+        </div>
+        <div class="col-12">
+            <button pButton pRipple type="button" label="Generar Reportes" class="p-button-rounded p-button-lg"></button>
+        </div>
+        <p-messages></p-messages>
+        
+        <ng-template pTemplate="footer">
+            <!-- <p-progressBar mode="indeterminate"  [style]="{'height': '4px', 'margin-bottom': '10px'}" [hidden]="hiddeProgress"></p-progressBar>
+            <p-button label="Save" icon="pi pi-check" ></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary"
+                [style]="{'margin-left': '.5em'}">
+            </p-button> -->
+        </ng-template>
+    </p-card>
+</p-card>

@@ -15,7 +15,7 @@ export class AuthGuard implements CanLoad, CanActivate {
   ) {}
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     if (this.authService.Usuario){
-      //console.log("Autenticado");
+      console.log("Autenticado");
       return true;
     }else {
       localStorage.clear();

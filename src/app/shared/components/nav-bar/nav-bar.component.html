@@ -1,25 +1,25 @@
 <!-- Nav bar usuario -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="this.currentUser === 'user'">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/portal/inicio">
-            <a class="navbar-brand" routerLink="/portal/inicio">
-                <img src="https://firebasestorage.googleapis.com/v0/b/rewards-latino.appspot.com/o/logo%2FLogo-REED-LATINO%20(3).png?alt=media&token=205e1fc6-cb93-4d20-863a-c87d4af3bcdc" alt="" width="35" height="29">
+        <a class="navbar-brand" routerLink="/admin/home">
+            <a class="navbar-brand" routerLink="/admin/home">
+                <img src="assets/img/logo_orion.png" width="35" height="29">
             </a>
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" routerLink="/portal/inicio" routerLinkActive="active">Inicio</a>
+                    <a class="nav-link" aria-current="page" routerLink="/admin/home" routerLinkActive="active">Inicio</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" aria-current="page" routerLink="/portal/categorias" routerLinkActive="active">Categorías</a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                     <a class="nav-link" aria-current="page" routerLink="/nominaciones" routerLinkActive="active">Nominaciones</a>
                 </li> -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" aria-current="page" routerLink="/portal/contacto" routerLinkActive="active">Contacto</a>
-                </li>
+                </li> -->
                 <div >
                     <li *ngIf="currentUser == 'admin'" class="nav-item">
                         <a class="nav-link" aria-current="page" routerLink="/admin" routerLinkActive="active">Dashboard</a>
@@ -36,7 +36,7 @@
                   </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="left: unset;">
                         <li><a class="dropdown-item" routerLink="/portal/mi-informacion">Mi Informaci&oacute;n</a></li>
-                        <li><a class="dropdown-item" routerLink="/portal/mis-nominaciones">Mis Nominaciones</a></li>
+                        <!-- <li><a class="dropdown-item" routerLink="/portal/mis-nominaciones">Mis Nominaciones</a></li> -->
                     </ul>
                 </div>
                 <a class="nav-link" style="cursor: pointer;" (click)="logout()" *ngIf="configService.Usuario">Cerrar Sesión</a>
@@ -50,7 +50,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" routerLink="/admin/home">
             <a class="navbar-brand" routerLink="/admin/home">
-                <img src="https://firebasestorage.googleapis.com/v0/b/rewards-latino.appspot.com/o/logo%2FLogo-REED-LATINO%20(3).png?alt=media&token=205e1fc6-cb93-4d20-863a-c87d4af3bcdc" alt="" width="40" height="34">
+                <img src="assets/img/logo_orion.png" alt="" width="40" height="34">
             </a>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +93,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" routerLink="/admin/home">
             <a class="navbar-brand" routerLink="/admin/home">
-                <img src="https://firebasestorage.googleapis.com/v0/b/rewards-latino.appspot.com/o/logo%2FLogo-REED-LATINO%20(3).png?alt=media&token=205e1fc6-cb93-4d20-863a-c87d4af3bcdc" alt="" width="40" height="34">
+                <img src="assets/img/logo_orion.png" alt="" width="40" height="34">
             </a>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
