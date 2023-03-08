@@ -17,11 +17,11 @@ export class CompaniesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.companiesService.getCompanies().subscribe(
-      companies => {
-        this.companies = companies;
-      },
-    )
+    // this.companiesService.getCompanies().subscribe(
+    //   companies => {
+    //     this.companies = companies;
+    //   },
+    // )
   }
 
   show() {

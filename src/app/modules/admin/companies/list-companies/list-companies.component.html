@@ -47,10 +47,10 @@
         <ng-template pTemplate="body" let-ContactoModel>
             <tr>
               
+                <td>{{ContactoModel.area}}</td>
+                <td>{{ContactoModel.descripcion}}</td>
+                <td>    <img src="{{ContactoModel.logo}}" width="35" height="29"></td>
                 <td>{{ContactoModel.nombre}}</td>
-                <td>{{ContactoModel.correo}}</td>
-                <td>{{ContactoModel.telefono}}</td>
-                <td>{{ContactoModel.mensaje}}</td>
                 <td> </td>
                 <td><span [class]="'ContactoModel-badge status-' + (ContactoModel.inventoryStatus ? ContactoModel.inventoryStatus.toLowerCase() : '')">{{ContactoModel.inventoryStatus}}</span>
                 </td>
