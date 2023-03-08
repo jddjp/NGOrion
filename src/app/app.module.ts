@@ -25,6 +25,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { QRCodeModule } from 'angularx-qrcode';
+import {ProgressBarModule} from 'primeng/progressbar';
 
 //Prime Components
 import {DataViewModule} from 'primeng/dataview';
@@ -33,6 +34,9 @@ import { DynamicDialogModule, DialogService } from 'primeng/dynamicdialog';
 import { DialogModule } from 'primeng/dialog';
 import {InputTextModule} from 'primeng/inputtext';
 import {FileUploadModule} from 'primeng/fileupload';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {MessageService} from 'primeng/api';
 
 // Idioma Español
 import { DatePipe, TitleCasePipe } from '@angular/common';
@@ -71,12 +75,16 @@ import { CompanyDetailComponent } from './modules/company-detail/company-detail.
     DialogModule,
     InputTextModule,
     FileUploadModule,
+    MessagesModule,
+    MessageModule,
+    ProgressBarModule,
   ],
   providers: [
     DatePipe, 
     TitleCasePipe, 
     CompaniesService, 
     DialogService,
+    MessageService,
   ],
   bootstrap: [AppComponent],
 })

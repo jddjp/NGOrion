@@ -20,11 +20,15 @@
         <div class="col-12">
             <div class="p-inputgroup">
                 <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
-                <input type="text" pInputText placeholder="Área">         
+                <input type="text" pInputText placeholder="Área" aria-describedby="area-help" class="ng-invalid ng-dirty">
             </div>
+            <small id="area-help" class="p-error block">Username is not available.</small>
         </div>
+        <p-messages></p-messages>
+        
         <ng-template pTemplate="footer">
-            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-progressBar mode="indeterminate"  [style]="{'height': '4px', 'margin-bottom': '10px'}" [hidden]="hiddeProgress"></p-progressBar>
+            <p-button label="Save" icon="pi pi-check" (onClick)="addCompany()"></p-button>
             <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary"
                 [style]="{'margin-left': '.5em'}">
             </p-button>
