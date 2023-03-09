@@ -1,4 +1,6 @@
 export interface CompanyModel {
-    name: string;
+    nombre: string;
     logo: string;
+    descripcion: string;
+    area: string;
 }

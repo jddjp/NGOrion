@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MessageService} from 'primeng/api';
+import { MessageService } from 'primeng/api';
+import { CompaniesService } from 'src/app/services/companies.service';
 import { StringsComponent } from '../../../../../constants/strings.component';
+import { CompanyModel } from '../../../../../models/company.model';
 
 @Component({
   selector: 'app-add-company',
@@ -9,9 +11,16 @@ import { StringsComponent } from '../../../../../constants/strings.component';
 })
 export class AddCompanyComponent implements OnInit {
   hiddeProgress = true;
+  company: CompanyModel = {
+    nombre: '',
+    logo: '',
+    descripcion: '',
+    area: ''
+  };
 
   constructor(
     private messageService: MessageService,
+    private firebaseService: CompaniesService,
   ) { }
 
   ngOnInit(): void {
@@ -23,14 +32,28 @@ export class AddCompanyComponent implements OnInit {
 
   addCompany() {
     this.hiddeProgress = false;
-    this.showSuccessMsg();
+    this.firebaseService.addCompany(this.company)
+      .then(() => {
+        this.company = {
+          nombre: '',
+          logo: '',
+          descripcion: '',
+          area: ''
+        };
+        this.hiddeProgress = true;
+        this.showSuccessMsg();
+      })
+      .catch((error) => {
+        this.hiddeProgress = true;
+        this.showErrorMsg();
+      });
   }
 
   showSuccessMsg() {
-    this.messageService.add({severity:'success', summary:'', detail: StringsComponent.add_company_success});
+    this.messageService.add({ severity: 'success', summary: '', detail: StringsComponent.add_company_success });
   }
-  
+
   showErrorMsg() {
-    this.messageService.add({severity:'error', summary:'', detail: StringsComponent.general_error});
-  } 
+    this.messageService.add({ severity: 'error', summary: '', detail: StringsComponent.general_error });
+  }
 }

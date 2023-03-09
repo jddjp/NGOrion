@@ -49,7 +49,7 @@ import { CompanyDetailComponent } from './modules/user/company-detail/company-de
   declarations: [
     AppComponent, 
     CompaniesComponent, 
-    CompanyDetailComponent
+    CompanyDetailComponent,
   ],
   imports: [
     BrowserModule,

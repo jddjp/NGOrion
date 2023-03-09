@@ -2,36 +2,36 @@
     <div class="logo-container">
         <img alt="logo" src="assets/img/logo_orion.png" class="logo">
     </div>
-    <p-card header="Añadir empresa" [style]="{width: '50%', margin: 'auto auto'}" styleClass="p-card-shadow">
-        <div class="col-12">
-            <div class="p-inputgroup">
-                <span class="p-inputgroup-addon"><i class="pi pi-building"></i></span>
-                <input type="text" pInputText placeholder="Nombre de la empresa">         
-            </div>
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-building"></i></span>
+            <input [(ngModel)]="company.nombre" type="text" pInputText placeholder="Nombre de la empresa">
         </div>
-        <h6 class="leftMargin">Logo de la empresa</h6>
-        <p-fileUpload class="leftMargin" name="myfile[]" mode="basic" [customUpload]="true" (uploadHandler)="myUploader($event)"></p-fileUpload>
-        <div class="col-12">
-            <div class="p-inputgroup">
-                <span class="p-inputgroup-addon"><i class="pi pi-align-left"></i></span>
-                <input type="text" pInputText placeholder="Descripción">         
-            </div>
+    </div>
+    <h6 class="leftMargin">Logo de la empresa</h6>
+    <p-fileUpload class="leftMargin" name="myfile[]" mode="basic" [customUpload]="true"
+        (uploadHandler)="myUploader($event)"></p-fileUpload>
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-align-left"></i></span>
+            <input [(ngModel)]="company.descripcion" type="text" pInputText placeholder="Descripción">
         </div>
-        <div class="col-12">
-            <div class="p-inputgroup">
-                <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
-                <input type="text" pInputText placeholder="Área" aria-describedby="area-help" class="ng-invalid ng-dirty">
-            </div>
-            <small id="area-help" class="p-error block">Username is not available.</small>
+    </div>
+    <div class="col-12">
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+            <input [(ngModel)]="company.area" type="text" pInputText placeholder="Área" aria-describedby="area-help">
         </div>
-        <p-messages></p-messages>
-        
-        <ng-template pTemplate="footer">
-            <p-progressBar mode="indeterminate"  [style]="{'height': '4px', 'margin-bottom': '10px'}" [hidden]="hiddeProgress"></p-progressBar>
-            <p-button label="Save" icon="pi pi-check" (onClick)="addCompany()"></p-button>
-            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary"
-                [style]="{'margin-left': '.5em'}">
-            </p-button>
-        </ng-template>
-    </p-card>
+        <!--<small id="area-help" class="p-error block">Username is not available.</small>-->
+    </div>
+    <p-messages></p-messages>
+
+    <ng-template pTemplate="footer">
+        <p-progressBar mode="indeterminate" [style]="{'height': '4px', 'margin-bottom': '10px'}"
+            [hidden]="hiddeProgress"></p-progressBar>
+        <p-button label="Save" icon="pi pi-check" (onClick)="addCompany()"></p-button>
+        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}">
+        </p-button>
+    </ng-template>
+    <!--class="ng-invalid ng-dirty"-->
 </p-card>

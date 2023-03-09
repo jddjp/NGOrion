@@ -11,10 +11,6 @@ import { ListCompaniesComponent } from './modules/admin/companies/list-companies
 
 const routes: Routes = [
   {
-    path: ConstantsComponent.companies_endpoint,
-    component: CompaniesComponent,
-  },
-  {
     path: ConstantsComponent.add_company_endpoint,
     component: AddCompanyComponent,
   },
@@ -22,7 +18,6 @@ const routes: Routes = [
     path: ConstantsComponent.list_companies_endpoint,
     component: ListCompaniesComponent,
   },
-  
   {
     path: 'portal',
     loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule),

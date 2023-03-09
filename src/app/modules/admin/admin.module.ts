@@ -52,6 +52,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AddNominacionAdminComponent } from './nominaciones/add-nominacion/add-nominacion.component';
 import { AddCompanyComponent } from './companies/add-company/add-company/add-company.component';
 import { ListCompaniesComponent } from './companies/list-companies/list-companies.component';
+import { ToolBarComponent } from './tool-bar/tool-bar.component';
 
 @NgModule({
     imports: [
@@ -106,6 +107,7 @@ import { ListCompaniesComponent } from './companies/list-companies/list-companie
         AddNominacionAdminComponent,
         AddCompanyComponent,
         ListCompaniesComponent,
+        ToolBarComponent,
     ]
 })
 export class AdminModule { }

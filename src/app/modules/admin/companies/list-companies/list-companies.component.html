@@ -1,17 +1,7 @@
 <p-toast></p-toast>
 
 <div class="card">
-    <p-toolbar styleClass="mb-4">
-        <ng-template pTemplate="left">
-            <button pButton pRipple label="Nuevo" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()" ></button>
-
-        </ng-template>
-
-        <ng-template pTemplate="right">
-            <p-fileUpload mode="basic" accept="correo/*" [maxFileSize]="1000000" label="Import" chooseLabel="Importar" class="mr-2 inline-block"></p-fileUpload>
-            <button pButton pRipple label="Exportar" icon="pi pi-upload" class="p-button-help"></button>
-        </ng-template>
-    </p-toolbar>
+    <app-tool-bar></app-tool-bar>
 
     <p-table #dt [value]="ContactoModels" [rows]="10" [paginator]="true" [globalFilterFields]="['nombre','country.nombre','representative.nombre','status']" responsiveLayout="scroll" [(selection)]="selectedContactoModels" [rowHover]="true" dataKey="id" currentPageReportTemplate="Mostrando   {first}hasta  {last} de {totalRecords}  Empresas"
         [showCurrentPageReport]="true">
@@ -68,7 +58,7 @@
     </p-table>
 </div>
 
-<p-dialog [(visible)]="ContactoModelDialog" [style]="{width: '750px'}" header="Nuevo/Actualiza" [modal]="true" styleClass="p-fluid">
+<!--<p-dialog [(visible)]="ContactoModelDialog" [style]="{width: '750px'}" header="Nuevo/Actualiza" [modal]="true" styleClass="p-fluid">
     <ng-template pTemplate="content">
         <p-card [style]="{width: '100%', margin: 'auto auto'}" styleClass="p-card-shadow">
             <div class="logo-container">
@@ -114,6 +104,6 @@
         <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
         <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveContactoModel()"></button>
     </ng-template>
-</p-dialog>
+</p-dialog>-->
 
 <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
