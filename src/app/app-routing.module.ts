@@ -4,7 +4,7 @@ import { AuthGuard } from '../config/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginAdminComponent } from './auth/admin/login-admin/login-admin.component';
 import { ConstantsComponent } from './constants/constants.component';
-import { CompaniesComponent } from './modules/companies/companies.component';
+import { CompaniesComponent } from './modules/user/companies/companies.component';
 import { AddCompanyComponent } from './modules/admin/companies/add-company/add-company/add-company.component';
 import { ListCompaniesComponent } from './modules/admin/companies/list-companies/list-companies.component';
 
