@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-company-detail',
@@ -15,9 +16,11 @@ export class CompanyDetailComponent implements OnInit {
   constructor(
     public config: DynamicDialogConfig,
     public ref: DynamicDialogRef,
+    private primengConfig: PrimeNGConfig,
   ) { }
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
     this.area = this.config.data.area;
     this.logo = this.config.data.logo;
     this.detail = this.config.data.detail;

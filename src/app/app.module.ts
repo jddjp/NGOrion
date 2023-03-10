@@ -37,6 +37,7 @@ import {FileUploadModule} from 'primeng/fileupload';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {MessageService} from 'primeng/api';
+import {FieldsetModule} from 'primeng/fieldset';
 
 // Idioma Español
 import { DatePipe, TitleCasePipe } from '@angular/common';
@@ -79,6 +80,7 @@ import { CompanyDetailComponent } from './modules/user/company-detail/company-de
     MessagesModule,
     MessageModule,
     ProgressBarModule,
+    FieldsetModule,
   ],
   providers: [
     DatePipe, 

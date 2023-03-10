@@ -13,6 +13,7 @@ import { DocumentData, QuerySnapshot } from '@firebase/firestore';
 })
 export class CompaniesComponent implements OnInit {
   companiesModels: any[] = [];
+  hiddeProgress = false;
 
   constructor(
     private firebaseService: CompaniesService,
@@ -32,6 +33,7 @@ export class CompaniesComponent implements OnInit {
   }
 
   updateConvocatoriaCollection(snapshot: QuerySnapshot<DocumentData>) {
+    this.hiddeProgress = true;
     this.companiesModels = [];
     snapshot.docs.forEach((mensaje) => {
       this.companiesModels.push({ ...mensaje.data(), id: mensaje.id });

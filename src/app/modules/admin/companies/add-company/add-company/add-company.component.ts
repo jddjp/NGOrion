@@ -3,6 +3,7 @@ import { MessageService } from 'primeng/api';
 import { CompaniesService } from 'src/app/services/companies.service';
 import { StringsComponent } from '../../../../../constants/strings.component';
 import { CompanyModel } from '../../../../../models/company.model';
+import {DynamicDialogRef} from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-add-company',
@@ -21,6 +22,7 @@ export class AddCompanyComponent implements OnInit {
   constructor(
     private messageService: MessageService,
     private firebaseService: CompaniesService,
+    public ref: DynamicDialogRef,
   ) { }
 
   ngOnInit(): void {
@@ -55,5 +57,9 @@ export class AddCompanyComponent implements OnInit {
 
   showErrorMsg() {
     this.messageService.add({ severity: 'error', summary: '', detail: StringsComponent.general_error });
+  }
+
+  close() {
+    this.ref.close();
   }
 }

@@ -1,0 +1,9 @@
+.logoImage {
+    width: 13%;
+    float: left;
+}
+.detailCont {
+    width: 87%;
+    float: left;
+    padding-top: 45px;
+}
