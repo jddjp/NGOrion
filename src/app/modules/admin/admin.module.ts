@@ -92,7 +92,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
         InputTextareaModule,
         ChipModule,
         KnobModule,
-        PickListModule
+        PickListModule,
     ],  providers: [ConfirmationService],
     declarations: [
         AdminComponent,

@@ -4,6 +4,7 @@ import { CompaniesService } from 'src/app/services/companies.service';
 import { StringsComponent } from '../../../../../constants/strings.component';
 import { CompanyModel } from '../../../../../models/company.model';
 import {DynamicDialogRef} from 'primeng/dynamicdialog';
+import { CargaImagenesService } from '../../../../../services/cargaImagenes.service';
 
 @Component({
   selector: 'app-add-company',
@@ -22,6 +23,7 @@ export class AddCompanyComponent implements OnInit {
   constructor(
     private messageService: MessageService,
     private firebaseService: CompaniesService,
+    private cargaImagenesService: CargaImagenesService,
     public ref: DynamicDialogRef,
   ) { }
 
@@ -30,6 +32,7 @@ export class AddCompanyComponent implements OnInit {
 
   myUploader(event) {
     //event.files == files to upload
+    this.cargaImagenesService.upload(event.files);
   }
 
   addCompany() {

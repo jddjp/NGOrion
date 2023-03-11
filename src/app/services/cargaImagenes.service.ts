@@ -6,6 +6,7 @@ import { FileItem, ImageModel } from '../models/img.model';
 import { getApp } from '@angular/fire/app';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from '@angular/fire/storage';
 import { VariablesService } from './variablesGL.service';
+import { ConstantsComponent } from '../constants/constants.component';
 
 @Injectable({
   providedIn: 'root'
@@ -40,11 +41,11 @@ export class CargaImagenesService {
     });
   }
 
-  upload(files: FileItem[]){
+  upload(files: FileItem[]) {
     this.idsImageSave = [];
     this.idsImageErr = [];
     const firebaseApp = getApp();
-    const storage = getStorage(firebaseApp, 'gs://rewards-latino.appspot.com');
+    const storage = getStorage(firebaseApp, ConstantsComponent.store_url); 
     this.archivosUpload = files;
     for(const file of files){
 
@@ -87,12 +88,12 @@ export class CargaImagenesService {
             //console.log('File available at', downloadURL);
             file.url = downloadURL;
 
-            this.addImage({
+            /*this.addImage({
               nombre: file.nombreArchivo,
               url: file.url,
               fileMapped: file.fileMapped,
               uid: JSON.parse(localStorage.d).uid
-            }, file);
+            }, file);*/
 
             //this.validaEndUpload();
 

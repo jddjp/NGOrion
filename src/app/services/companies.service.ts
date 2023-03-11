@@ -1,5 +1,5 @@
 
-import { CompanyModel } from '../models/company.model';
+import { CompanyModel } from '../models/company.model'; 
 import { HttpClient } from '@angular/common/http';
 
 import { Injectable } from '@angular/core';
